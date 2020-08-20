@@ -1,0 +1,56 @@
+{
+  "name": "codicastudio/secure-header",
+  "description": "A noobs worthless garbage, just learning.",
+  "keywords": [
+      "worthless garabage by a noob."
+  ],
+  "homepage": "https://github.com/codicastudio/secure-header",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Michael J Brown",
+          "email": "codicastudiodev@gmail.com",
+          "homepage": "https://codicastudio.dev",
+          "role": "Developer"
+      }
+  ],
+  "require": {
+    "php": "^7.4.8",
+    "illuminate/support": "~7.0"
+  },
+  "require-dev": {
+    "ext-json": "*",
+    "ext-xdebug": "*",
+    "friendsofphp/php-cs-fixer": "~2.2",
+    "orchestra/testbench": "~5.0",
+    "phpstan/phpstan": "~0.7",
+    "phpunit/phpunit": "~5.7|~6.5|~7.5|~8.4|~9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "codicastudio\\SecureHeaders\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "codicastudio\\SecureHeaders\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+},
+  "extra": {
+    "laravel": {
+      "providers": [
+        "codicastudio\\SecureHeaders\\SecureHeadersServiceProvider"
+      ]
+    }
+  }
+}
